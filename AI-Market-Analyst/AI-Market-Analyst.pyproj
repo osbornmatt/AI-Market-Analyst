@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>AI-Market-Analyst</Name>
     <RootNamespace>AI-Market-Analyst</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|ai_market_analyst</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AI_Market_Analyst.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|ai_market_analyst" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
